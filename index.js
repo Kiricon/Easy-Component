@@ -27,6 +27,14 @@ function getElement(html) {
  */
 function render(component, parent) {
     parent.appendChild(component.el);
+    component.onRender();
+    let events = ['click', 'change', 'focus', 'blur', 'hover'];
+
+    events.forEach((event) => {
+        if(component[event] != undefined) {
+            component.el.addEventListener(event, component[event]);
+        }
+    });
 }
 
 /*
