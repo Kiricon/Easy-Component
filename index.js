@@ -13,8 +13,13 @@ class Component {
     }
 }
 
+/**
+ * Function for turning text in to an html element.
+ * @param {String} html - string to conver to an html object
+ * @return {Element} - And html element from the text
+ */
 function getElement(html) {
-    var d = document.createElement('div');
+    let d = document.createElement('div');
     d.innerHTML = html;
     return d.firstChild;
 }
@@ -23,7 +28,6 @@ function getElement(html) {
  * Function to render a component
  * @param {Component} component - Component to render
  * @param {Element} parent - parent element to render compponent in
- * @return {Void}
  */
 function render(component, parent) {
     parent.appendChild(component.el);
