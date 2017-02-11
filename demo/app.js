@@ -1,4 +1,4 @@
-class TodoList extends Component {
+class SimpleButton extends Component {
     render() {
         return '<button>Hello World</button>';
     }
@@ -15,4 +15,4 @@ class TodoList extends Component {
     }
 }
 
-render(new TodoList(), document.getElementById('app'));
+render(new SimpleButton(), document.getElementById('app'));

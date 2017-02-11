@@ -31,7 +31,9 @@ function getElement(html) {
  */
 function render(component, parent) {
     parent.appendChild(component.el);
-    component.onRender();
+    if(component.onRender != undefined) {
+        component.onRender();
+    }
     let events = ['click', 'change', 'focus', 'blur', 'hover'];
 
     events.forEach((event) => {
@@ -41,8 +43,8 @@ function render(component, parent) {
     });
 }
 
-/*
+
 module.exports = {
     Component: Component,
     Render: render,
-}; */
+};

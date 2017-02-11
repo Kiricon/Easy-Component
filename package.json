@@ -1,6 +1,6 @@
 {
   "name": "easy-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An es6 module for building react like components",
   "main": "index.js",
   "scripts": {
